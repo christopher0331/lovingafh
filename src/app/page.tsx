@@ -126,13 +126,13 @@ export default function Home() {
       <HeroSlider />
 
       {/* Highlights Bar */}
-      <section className="relative z-10 -mt-16">
+      <section className="relative z-10 py-8 sm:py-0 sm:-mt-16 bg-muted sm:bg-transparent">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {highlights.map((h) => (
               <div
                 key={h.title}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 flex items-start gap-4"
+                className="bg-white rounded-2xl p-6 shadow-md sm:shadow-lg border border-gray-100 flex items-start gap-4"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   {h.icon}

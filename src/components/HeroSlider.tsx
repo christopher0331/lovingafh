@@ -55,28 +55,28 @@ export default function HeroSlider() {
         </div>
       ))}
 
-      {/* Gradient overlay */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
-      {/* Content */}
-      <div className="absolute inset-0 flex items-end">
-        <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
-          <div className="max-w-2xl">
-            <p className="text-accent font-medium text-sm sm:text-base tracking-wide uppercase mb-3">
+      {/* Content — vertically centered to reduce gap from header */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto sm:mx-0 text-center sm:text-left">
+            <p className="text-accent font-medium text-xs sm:text-sm tracking-wide uppercase mb-3 sm:mb-4">
               Bothell, Washington
             </p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6">
               Where Your Loved Ones{" "}
-              <span className="text-accent-light">Feel at Home</span>
+              <span className="text-accent-light block sm:inline">Feel at Home</span>
             </h1>
-            <p className="text-white/80 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-white/90 text-sm sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto sm:mx-0">
               Compassionate 24/7 senior care with professional staffing,
               home-cooked meals, and a wide range of personalized services.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
               <a
                 href="tel:+12063699906"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-primary-light transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-primary-light transition-colors"
               >
                 <svg
                   className="h-4 w-4"
@@ -95,7 +95,7 @@ export default function HeroSlider() {
               </a>
               <a
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm px-7 py-3.5 text-sm font-semibold text-white border border-white/25 hover:bg-white/25 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 backdrop-blur-sm px-8 py-3.5 text-sm font-semibold text-white border border-white/25 hover:bg-white/25 transition-colors"
               >
                 Our Services
               </a>
@@ -104,10 +104,10 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      {/* Nav Arrows */}
+      {/* Nav Arrows — Hidden on mobile to prevent text overlap */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+        className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm items-center justify-center text-white hover:bg-white/30 transition-colors"
         aria-label="Previous slide"
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -116,7 +116,7 @@ export default function HeroSlider() {
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+        className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm items-center justify-center text-white hover:bg-white/30 transition-colors"
         aria-label="Next slide"
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
